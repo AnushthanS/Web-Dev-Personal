@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Anushthan Saxena">
     <meta name="description" content="Continuing with lecture 3 of the FreeCodeCamp html tutorial">
-    <link rel="icon" href="../lec1,2/html_icon.png" type="image/x-icon">
+    <link rel="icon" href="../file1/html_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
@@ -15,6 +15,20 @@
     <h3>sub sub heading</h3>
     <hr>
     <h2>Learning HTML</h2>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#ordered_list">Ordered list</a>
+            </li>
+            <li>
+                <a href="#unordered_list">Unordered list</a>
+            </li>
+            <li>
+                <a href="#descriptive_list">Descriptive list</a>
+            </li>
+        </ul>
+    </nav>
     <p>One of the first web pages I make...
     <br> <em>Real emphasis on learning though</em>
     <br><strong>No better way to learn other than the practical approach!</strong>
@@ -23,36 +37,53 @@
     <br> come from <abbr title="Mozilla Developer Network">MDN.</abbr>
     </strong>
     </p>
+
     <hr>
+
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias officia ut ipsam beatae sit ullam,
         <br>&nbsp;&nbsp;&nbsp;dolorem odit quasi! Voluptate quam atque a cumque sit 
         <br>dolor, laboriosam voluptas suscipit doloremque est.
     </p>
     <!--This comment may be seen by everybody-->
+    <section id="ordered_list">
+        <h2>Let me make a random list(ordered):</h2>
+        <ol>
+            <li>First item here</li>
+            <li>Second item here</li>
+            <li>Third item here</li>
+        </ol>
+    </section>
     
-    <h2>Let me make a random list(ordered):</h2>
-    <ol>
-        <li>First item here</li>
-        <li>Second item here</li>
-        <li>Third item here</li>
-    </ol>
-
-    <h2>Unordered list:</h2>
+    <hr>
+    <section id="unordered_list">
+        <h2>Unordered list:</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li><address>
+                Janakpuri Colony, Shahganj, Agra-282010
+            </address></li>
+        </ul>
+    </section>
+    <hr>
+    <section id="descriptive_list">
+        <p><strong>Descriptive list:</strong></p>
+        <dl>
+            <dt><strong>First term</strong></dt>
+                <dd>Some content relating the first term</dd>
+            <dt><em>Second term</em></dt>
+                <dd>Some content for the second term</dd>
+        </dl>
+    </section>
+    <hr>
     <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li><address>
-            Janakpuri Colony, Shahganj, Agra-282010
-        </address></li>
+        <li>
+            <a href="#">Back to the top</a>.
+        </li>
+        <li>
+            Open up the <a href="/">root directory</a>.
+        </li>
     </ul>
-
-    <p>Descriptive list:</p>
-    <dl>
-        <dt><strong>First term</strong></dt>
-            <dd>Some content relating the first term</dd>
-        <dt><em>Second term</em></dt>
-            <dd>Some content for the second term</dd>
-    </dl>
 </body>
 </html>
