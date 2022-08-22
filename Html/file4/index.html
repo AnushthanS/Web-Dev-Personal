@@ -11,10 +11,12 @@
 	</head>
 
 	<body>
-		<h1>My Goals for the Year</h1>
-		<hr>
+		<header>
 
-		<nav>
+		<h1>My Goals for the Year</h1>
+		
+
+		<nav aria-label="primary-navigation">
 			<ul>
 				<li>
 					<a href="#html">Learning HTML</a>
@@ -24,14 +26,31 @@
 				</li>
 			</ul>
 		</nav>
+		</header>
 		<hr>
 
-		<section id="html">
+		<main>
+
+		<article id="html">
 			<h2>I'm ready to learn HTML</h2>
+			<section>
+			<h3>HTML5</h3>
 			<img src="img/html_logo_300x300.png" alt="html5 icon"  title="html5" width="300" height="300">
+			<figure>
+				<figcaption>An example of some HTML code</figcaption>
+				<p>
+					<code>
+						&lt;h1&gt;Hello World!&lt;/h1&gt;
+					</code>
+				</p>
+			</figure>
+			</section>
+
 			<p>
 				This is my first web page!
 			</p>
+			
+			<section>
 
 			<h3>My Daily Schedule</h3>
 			<p>
@@ -42,11 +61,72 @@
 				<li>...I plan out my schedule</li>
 				<li>...I use resources from <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org">MDN</a></abbr>.</li>
 			</ol>
+
+			<aside>
+				<details>
+					<summary>
+						Guess the <mark>number of hours</mark> I code per day
+					</summary>
+					<p>
+						I start at <time datetime="21:00">9 pm</time> and I write code for <time datetime="PT3H">3 hours</time> every night.
+					</p>
+				</details>
+			</aside>
+			<br>
+
+
+			<table>
+				<caption>My Daily Schedule</caption>
+
+				<thead>
+				<tr>
+					<th scope="col">&nbsp;</th>
+					<th scope="col">
+						Time
+					</th>
+					<th scope="col">
+						Activity
+					</th>
+				</tr>
+				</thead>
+
+				<tbody>
+				<tr>
+					<th scope="row">Night</th>
+					<td>
+						<time datetime="21:00">9 pm</time>--<time datetime="00:00">12 am</time>
+					</td>
+					<td>Write Code</td>
+				</tr>
+				<tr>
+					<th scope="row">MidNight</th>
+					<td>
+						<time datetime="00:00">12 am</time>--<time datetime="01:00">1 am</time>
+					</td>
+					<td>Take a break</td>
+				</tr>
+				<tr>
+					<th scope="row">Afternoon</th>
+					<td rowspan="2">All other times</td>
+					<td>Free Time</td>
+				</tr>
+				<tr>
+					<th scope="row">Evening</th>
+					<td>Sleep</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3">And that's what I do everyday, 6 days a week</td>
+				</tr>
+			</tfoot>
+			</table>
 		</section>
+		</article>
 
 		<hr>
 
-		<section id="vacation">
+		<article id="vacation">
 			<h2>I am also planning a vacation</h2>
 			<p>
 				I've been working hard and <em>really need a getaway</em>.
@@ -55,6 +135,7 @@
 				I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach.
 			</p>
 
+			<section>
 			<h3>Places I'd like to visit</h3>
 			<ul>
 				<li>
@@ -73,9 +154,15 @@
                     	Bahia Petempich Puerto Morelos, Mexico<br>
                     	Colonia Morelos, México 77580
 					</address>
+					<figure>
+						<img src="img/vacation.jpg" alt="Margaritaville" title="Margaritaville resort" width="400" height="267" loading="lazy">
+						<figcaption>A Carribean vacation image</figcaption>
+					</figure>
 				</li>
 			</ul>
+		    </section>
 
+			<section>
 			<!--TODO: Add more places-->
 			<h3>Places I want to avoid</h3>
 			<dl>
@@ -94,13 +181,19 @@
 					These are also cold.
 				</dd>
 			</dl>
-		</section>
+			</section>
+
+		</article>
+
+		</main>
 
 		<hr>
-		&lt;&lt;&lt; &copy; <a href="about.html">Anushthan Saxena</a> &gt;&gt;&gt;
-		<p>
+		<footer>
+
+		<p>&lt;&lt;&lt; &copy; <a href="about.html">Anushthan Saxena</a> &gt;&gt;&gt;<br>
 			<a href="#">Back to Top</a><br>
 			<a href="/">Root</a>
 		</p>
+		</footer>
 	</body>
 </html>
