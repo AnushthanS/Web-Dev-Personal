@@ -1,0 +1,41 @@
+:root{
+    --color1: #333;
+    --color2: rgba(108, 46, 242, 1);
+    --color3: rgba(1, 89, 89, 1);
+    --color4: #D93B92;
+    --color5: rgba(165, 16, 3, 1);
+    --color6: #e8e8e8;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: "Nunito sans", sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+#intro{
+    border: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+    font-family: var(--mono);
+    background-color: var(--color1);
+    color: var(--color6);
+}
+
+h2{
+    color: var(--color2);
+}
+
+span{
+    border: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+    font-size: 50px;
+    color: var(--color4);
+}

@@ -4,23 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Anushthan Saxena">
-    <meta name="description" content="A beginner HTMl project with multiple pages linked to each other.">
+    <meta name="description" content="Copy of my first project">
 
-    <title>Litte Taco Shop</title>
+    <title>The Little Taco Shop</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 
 <body>
     <header>
         <h1>Welcome to The Little Taco Shop</h1>
-
         <nav>
             <ul>
                 <li>
                     <a href="#about">About <abbr title="The Little Taco Shop">LTS</abbr></a>
                 </li>
-
                 <li>
                     <a href="#menu">Our Menu</a>
                 </li>
@@ -36,8 +34,8 @@
         </nav>
 
         <figure>
-            <img src="img/tacos_and_drink_400x267.png" alt="Tacos and a Drink" title="We love Tacos!" width="400"
-                height="267">
+            <img src="tacos_and_drink_400x267.png" alt="Tacos and a Drink!" title="We love serving you" width="400"
+                height="207">
             <figcaption>
                 Tacos and a Drink
             </figcaption>
@@ -47,17 +45,21 @@
     <hr>
 
     <main>
-        <article id="about">
+        <article id="#about">
             <h2>About <abbr title="The Little Taco Shop">LTS</abbr></h2>
+
             <p>
                 <abbr title="The Little Taco Shop">LTS</abbr> was founded in <time datetime="2022">2022</time>. Our shop
                 was built from a <strong>love of tacos</strong>🌮🌮🌮. We hope our shop adds a unique and interesting
                 place to our little town.
             </p>
+
             <aside>
                 <h3>Taco Trivia</h3>
                 <details>
-                    <summary>When did tacos first appear in the United States</summary>
+                    <summary>
+                        When did tacos first appear in the United States
+                    </summary>
                     <p>
                         Jeffrey M. Pilcher, taco historian and professor of history at the University of Minnesota, says
                         the earliest mention of tacos in the United States are in a newspaper from <time
@@ -68,15 +70,17 @@
                 </details>
             </aside>
         </article>
+
         <hr>
-        <article id="menu">
-            <h2>Our Menu</h2>   
+
+        <article id="#menu">
+            <h2>Our Menu</h2>
             <table>
                 <caption>Our Tacos</caption>
                 <thead>
                     <tr>
                         <th>Tacos</th>
-                        <th scope="col"><abbr titile="Quantity">Qty</abbr></th>
+                        <th scope="col"><abbr title="Quantity">Qty</abbr></th>
                         <th scope="col">Price</th>
                     </tr>
                 </thead>
@@ -110,13 +114,13 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3"> Chips &amp; Salsa $2</td>
+                        <td colspan="3">Chips &amp; Salsa $2.00</td>
                     </tr>
                 </tfoot>
             </table>
             <br>
             <p>
-                <a href="#">Back to Top</a>
+                <a href="#">Back to the Top</a>
             </p>
         </article>
     </main>
@@ -126,4 +130,4 @@
     </footer>
 </body>
 
-</html> 
+</html>
