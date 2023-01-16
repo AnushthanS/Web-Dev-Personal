@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+#title{
+    font-family: sans-serif;
+}
+#title, #description{
+    text-align: center;
+}
+
+#description{
+    font-family: serif;
+    font-size: 16px;
+}

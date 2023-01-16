@@ -1,0 +1,80 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+h1, p{
+  text-align: center;
+  margin: 1em auto;
+}
+
+form{
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+  width: 60vw;
+  padding-bottom: 2em;
+}
+
+fieldset{
+  border: 0;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type{
+  border-bottom: none;
+}
+
+input, textarea, select{
+  width: 100%;
+  margin: 10px 0 0 0;
+  min-height: 2em;
+}
+
+input, textarea{
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #fff;
+}
+
+label{
+  display: block;
+  margin: 1.5rem 0;
+}
+
+input[type="submit"]{
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type="file"]{
+  padding: 1px 2px; /*Every input tag by default has 
+  these padding values*/
+}
+.inline{
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+  height: 2em;
+  font-size: 1.1rem;
+}
+
+a{
+  color: #dfdfe2;
+}

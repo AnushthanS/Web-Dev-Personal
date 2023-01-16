@@ -1,41 +1,86 @@
-:root{
-    --color1: #333;
-    --color2: rgba(108, 46, 242, 1);
-    --color3: rgba(1, 89, 89, 1);
-    --color4: #D93B92;
-    --color5: rgba(165, 16, 3, 1);
-    --color6: #e8e8e8;
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
     --font-size: 1.3rem;
-    --mono: "Oxygen mono", monospace;
+    --nunito: "Nunito", sans-serif;
     --sans: "Nunito sans", sans-serif;
 }
 
-html{
+html {
     box-sizing: border-box;
 }
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-#intro{
-    border: 10px;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 5px;
-    font-family: var(--mono);
-    background-color: var(--color1);
-    color: var(--color6);
-}
-
-h2{
-    color: var(--color2);
-}
-
-span{
-    border: 3px;
-    border-radius: 10px;
-    padding: 10px;
+body {
+    padding: 0;
     margin: 0;
-    font-size: 50px;
-    color: var(--color4);
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+a {
+    color: var(--magenta);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+span.name {
+    font-family: var(--nunito);
+    font-size: 4rem;
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h2 {
+    font-size: 4rem;
+}
+
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#contact p:last-child {
+    margin-top: 3rem;
+}
+
+.flex-container{
+    display: flexbox;
+    width: 100%;
+    justify-content: space-around;
 }

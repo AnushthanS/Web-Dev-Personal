@@ -1,0 +1,32 @@
+html{
+    box-sizing: border-box;
+    background-color: #eafaf1;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+nav{
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-nav{
+    display: inline-flex;
+    flex-wrap: wrap-reverse;
+}
+li{
+    list-style: none;
+    margin: 1rem;
+}
+
+button{
+    color: #00ad6a;
+    background-color: #eafaf1;
+    border: 0;
+    font-weight: bold;
+}

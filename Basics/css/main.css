@@ -1,0 +1,21 @@
+.circle-first{
+    height: 100px;
+    width: 100px;
+    border: 2px solid darkblue;
+    background-color: aliceblue;
+    border-radius: 50px;
+    display: inline-grid;
+}
+.circle-second{
+    float: right;
+    height: 100px;
+    width: 100px;
+    border: 2px solid hotpink;
+    background-color: aliceblue;
+    border-radius: 50px;
+    display:inline-grid;
+}
+
+*{
+    box-sizing: border-box;
+}
