@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #0a0a0c;
+    color: white;
+}
+#img-div{
+    margin: 10px auto;
+}
+
+#image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+}

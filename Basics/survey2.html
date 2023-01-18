@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Survey</title>
     <link rel="stylesheet" href="css/survey2.css" type="text/css">
 </head>
+
 <body>
     <h1 id="title">freeCodeCamp Survey Form</h1>
     <p id="description">Thank you for taking the time to help us improve our platform</p>
-    <form action="https://httpbin.org/post"></form>
+
+    <form method="post" action="https://register-demo.freecodecamp.org" id="survey-form">
+
+        <label id="name-label">Name <input type="text" name="name" id="name" placeholder="Enter your name here"
+                required></label>
+
+        <label id="email-label">Email <input type="email" name="email" id="email" placeholder="Enter your email"
+                required></label>
+
+        <label id="number-label">Age (optional) <input type="number" name="age" id="number" placeholder="Age" min="13"
+                max="120" required></label>
+
+        <label for="dropdown">
+            Which option best describes your current role?
+            <select id="dropdown">
+                <option value="">Select an option</option>
+                <option value="1">Student</option>
+                <option value="2">Full time job</option>
+                <option value="3">Prefer not to say</option>
+            </select>
+        </label>
+
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <input type="radio" name="radio" id="select-one" value="1" class="inline"> Definitely
+        <input type="radio" name="radio" id="select-one" value="0" class="inline"> Maybe
+        <input type="radio" name="radio" id="select-one" value="-1" class="inline"> Not Sure
+
+        <p>What would you like to be improved?</p>
+        <input type="checkbox" name="fend" id="select-any" class="inline" value="1">Front-end
+        <input type="checkbox" name="bend" id="select-any" class="inline" value="2">Back-end
+
+        <textarea name="textbox" id="textbox" cols="30" rows="10" placeholder="Any other feedback here!"></textarea>
+
+        <input type="submit" id="submit">
+    </form>
 </body>
+
 </html>

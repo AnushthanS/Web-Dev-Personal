@@ -1,1 +1,1 @@
-https://btholt.github.io/complete-intro-to-web-dev-v3/
+A bunch of web pages all adding something to the web dev leaning curve.

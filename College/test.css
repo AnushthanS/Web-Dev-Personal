@@ -1,0 +1,37 @@
+.main-image{
+    display: block;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+}
+
+.flex-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.part1{
+    background-color: azure;
+}
+
+.flex-buttons button{
+    color: blue;
+}
+.flex-buttons p{
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.part2{
+    border-top: 3px solid black;
+}
+.part2 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.part2 p{
+    font-size: 18px;
+    color: #000;
+}
