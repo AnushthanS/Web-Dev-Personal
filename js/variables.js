@@ -12,3 +12,19 @@ console.log(fixd);
 // console.log(fixd);
 // The lines above give an error, constant types cannot be changed after assignment, good to use to reduce errors due
 // to reassignment in code
+
+let a = null; //primitive null values
+let b = undefined; 
+// let b = 'abc'; will give an error, let can be reinitialized but
+// can't be redeclared
+let c = 'Anushthan';
+let d = 9.36;
+let e = 8126477754;
+let f = true;
+console.log(f);
+{
+    let f = false;
+    console.log(f);
+}
+
+console.log(f);
