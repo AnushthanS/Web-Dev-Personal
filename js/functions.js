@@ -1,6 +1,14 @@
-function fibonacci(number){
-    if(number == 0 || number == 1) return number;
-    return fibonacci(number - 1) + fibonacci(number - 2);
+function fibonacci(x){
+    if (x == 0 || x == 1) return x;
+    return fibonacci(x - 1) + fibonacci(x - 2);
 }
 
-console.log(fibonacci(2));
+console.log(fibonacci(10));
+
+//arrow functions 
+const factorial = (n) =>{
+    if(n <= 1) return 1;
+    return n * factorial(n - 1);
+} 
+
+console.log(factorial(5));
