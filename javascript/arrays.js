@@ -38,3 +38,29 @@ console.log(numbers, deletedValues);
 console.log(numbers.sort(customComparator));
 
 console.log(numbers.slice(3));
+
+let str_arr = Array.from("Anushthan");
+//can be used for : Array.from(document.getElementById("example"));
+
+
+//loop functions
+let num = [1, 2, 3, 4, 5, 6];
+
+num.forEach((el)=>{
+    console.log(el*el);
+})
+
+let sq_num = num.map((el) =>{
+    return el*el;
+});
+console.log(sq_num);
+
+let num2s = sq_num.filter((value)=>{
+    return value > 15;
+});
+console.log(num2s);
+
+//reduces the array to a single value
+let sum_nums = sq_num.reduce((a, b)=>{
+    return a + b;
+});

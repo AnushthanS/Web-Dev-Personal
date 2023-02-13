@@ -11,16 +11,16 @@ for(let key in obj){
 for(let i = 0; i < Object.keys(obj).length; i++){
     // console.log(Object.keys(obj)[i] + " = " + obj[Object.keys(obj)[i]]);
 }
+
 //for-of loop
 let arr = ['a', 'b', 'c', 'd', 'e', 0, 1];
 for(let i of arr){
     // console.log(i + " of type "+typeof(i));
 }
 
+//for-in loop for arrays works with indices
+for(let i in arr){
+    // console.log(arr[i]);
+}
 
-//loop functions
-let num = [1, 2, 3, 4, 5, 6];
 
-num.forEach((Element)=>{
-    console.log(Element*Element);
-})
