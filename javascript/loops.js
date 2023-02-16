@@ -24,3 +24,9 @@ for(let i in arr){
 }
 
 
+//loop functions
+let num = [1, 2, 3, 4, 5, 6];
+
+num.forEach((Element)=>{
+    console.log(Element*Element);
+})
