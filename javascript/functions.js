@@ -12,3 +12,5 @@ const factorial = (n) =>{
 } 
 
 console.log(factorial(5));
+
+module.exports.factorial = factorial;
