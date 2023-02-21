@@ -1,0 +1,34 @@
+.drum{
+    width: 140px;
+    height: 140px;
+    border: 2px solid gray;
+    border-radius: 0.5rem;
+}
+
+
+.w{
+    background-image: url("../images/snare.png");
+}
+.a{
+    background-image: url("../images/kick.png");
+}
+
+.s{
+    background-image: url("../images/crash.png");
+}
+
+.d{
+    background-image: url("../images/tom1.png");
+}
+
+.j{
+    background-image: url("../images/tom2.png");
+}
+
+.k{
+    background-image: url("../images/tom3.png");
+}
+
+.l{
+    background-image: url("../images/tom4.png");
+}
