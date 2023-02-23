@@ -18,3 +18,5 @@ app.get('/about', function(req, res){
 
 app.listen(8080);
 console.log('Server is listening on port 8080');
+
+//https://blog.logrocket.com/how-to-use-ejs-template-node-js-application/
