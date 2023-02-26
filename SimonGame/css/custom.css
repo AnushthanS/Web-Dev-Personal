@@ -1,0 +1,10 @@
+.boxes{
+    width: 220px;
+    height: 220px;
+    border: 8px solid black;
+    border-radius: 20%;
+}
+
+.flash{
+    opacity: 50%;
+}

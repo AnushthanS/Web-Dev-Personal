@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="S20210010027_styles.css">
+    <title>Assignment 1</title>
+    <meta name="author" content="Anushthan Saxena">
+    <meta name="roll_no" content="S20210010027">
+</head>
+
+<body>
+    <section class="question-1">
+        <h2>Question 1</h2>
+        <form class="flex" onsubmit="func1()">
+            <label for="name">Name <input type="text" name="name" id="name" placeholder="abc" required></label>
+
+            <label for="email" style="margin-left: -18px;">Email-id <input type="email" name="email" placeholder="email here" required></label>
+
+            <label for="password" style="margin-left: -25px;">Password <input type="password" name="password" required pattern="^(?=.*\d{3}[#@_\.])(?=.*[a-zA-Z]).{6,12}$"></label>
+
+            <input type="submit" id="submit" style="margin-bottom: 5px;">
+        </form>
+    </section>
+
+    <hr>
+
+    <section class="question-2 flex">
+        <h2>Question 2</h2>
+        <input type="text" id="input-values" placeholder="comma separated, no space">
+        <select name="input-type" id="input-type">
+            <option value="">type</option>
+            <option value="1">number</option>
+            <option value="2">string</option>
+            <option value="3">any</option>
+        </select>
+        <select name="order-select" id="order-select">
+            <option value="">order</option>
+            <option value="1">Ascending</option>
+            <option value="2">Descending</option>
+        </select>
+        <button onclick="order()">order values</button>
+        <p id="sorted-out"></p>
+    </section>
+
+    <hr>
+
+    <section class="question-3 flex">
+        <h2>Question 3</h2>
+        <p>Works for a 5x5 input matrix</p>
+        <form class="flex">
+            <input type="text" id="graph-input-1" placeholder="graph">
+            <input type="text" id="graph-input-2" placeholder="graph">
+            <input type="text" id="graph-input-3" placeholder="graph">
+            <input type="text" id="graph-input-4" placeholder="graph">
+            <input type="text" id="graph-input-5" placeholder="graph">
+        </form>   
+        <button onclick="prim()">Prim's algo</button>
+        <p id="prim-out"></p>
+    </section>
+    
+    <script src="S20210010027_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simon Game</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#011F3F]" style="font-family: 'Press Start 2P', cursive;">
+    <h1 id="heading" class="text-center text-[3rem] text-yellow-100 my-20">Press a key to start</h1>
+
+    <div class="flex flex-wrap justify-center w-[60vw] mx-auto">
+        <div class="space-y-4 space-x-4">
+            <div></div>
+            <div class="boxes bg-green-600" id="green"></div>
+            <div class="boxes bg-red-600" id="red"></div>
+        </div>
+        <div class="space-y-4 space-x-4">
+            <div></div>
+            <div class="boxes bg-yellow-600" id="yellow"></div>
+            <div class="boxes bg-blue-600" id="blue"></div>
+        </div>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
