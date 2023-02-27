@@ -22,11 +22,11 @@ function checkMovement(boxId, arr) {
             return boxId - 3;
         }
     }
-    if(boxId+1 == 1 || boxId+1 == 2 || boxId+1 == 4 || boxId+1 == 5 || boxId+1 == 7 || boxId+1 == 8){
+    if(boxId != 2 && boxId != 5 && boxId != 8){
         if(arr[boxId + 1] == null) return boxId + 1;
     }
 
-    if(boxId+1 == 2 || boxId+1 == 3 || boxId+1== 5 || boxId+1 == 6 || boxId+1 == 8 || boxId+1 == 9){
+    if(boxId != 0 && boxId != 3 && boxId != 6){
         if(arr[boxId - 1] == null) return boxId - 1;
     }
     return -1;
@@ -53,14 +53,15 @@ $('.box').click(function(){
         let temp = values[boxId - 1];
         values[boxId - 1] = values[move];
         values[move] = temp;
+        checkCompletion(values);
     }
 });
 
-console.log(values);
-
-let flag = true;
-for(let i = 0; i < 8; i++){
-    if(values[i] != (i + 1)) flag = false;
+function checkCompletion(values){
+    let flag = true;
+    for(let i = 0; i < 8; i++){
+        if(values[i] != (i + 1)) flag = false;
+    }
+    
+    if(flag) $('h1').text('Puzzle Completed!');
 }
-
-if(flag) $('h1').text('Puzzle Completed!');
