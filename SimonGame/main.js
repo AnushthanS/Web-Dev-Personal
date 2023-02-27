@@ -50,9 +50,9 @@ function restart(){
     gameFlag = false;
 }
 
-function checkAnswer(level){
+function checkAnswer(currentLevel){
     debugger;
-    if(generatedPattern[level] === userPattern[level]){
+    if(generatedPattern[currentLevel] === userPattern[currentLevel]){
         if(userPattern.length === generatedPattern.length){
             setTimeout(function(){
                 generateSequence();
