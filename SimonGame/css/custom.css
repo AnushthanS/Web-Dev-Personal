@@ -3,8 +3,16 @@
     height: 220px;
     border: 8px solid black;
     border-radius: 20%;
+    cursor: pointer;
 }
 
-.flash{
-    opacity: 50%;
+.pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
 }
+  
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+}
+  

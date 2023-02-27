@@ -1,84 +1,70 @@
-const randomValue = (low, high) => {
-    return Math.floor(Math.random()*(high - low) + low);
-};
+var buttonColours = ["red", "blue", "green", "yellow"];
+var generatedPattern = [], userPattern = [];
 
-let flag = false;
-standard();
+var gameFlag = false;
+var level = 0;
 
-
-const testStart = () => {
-    if(flag) {
-        // startGame();
+$(document).on('keypress', function(){
+    if(!gameFlag){
+        $('#heading').text('Level 0');
+        gameFlag = true;
+        generateSequence();
     }
-    else{
-        gameOver();
-    }
-};
+});
 
-const getId = (num) => {
-    switch(num){
-        case 1: return 'green';
-        case 2: return 'red';
-        case 3: return 'yellow';
-        case 4: return 'blue';
-    }
-};
+function generateSequence(){
+    userPattern = [];
+    $('#heading').text('level '+ (++level));
+    let randomNum = Math.floor(Math.random() * 4);
+    let randomColor = buttonColours[randomNum];
 
-const standard = () => {
-    $('.boxes').on('click', () => {});
+    generatedPattern.push(randomColor);
 
-    $('html').on('keypress', () => {
-        if(!flag){
-            $('#heading').text("Game started");
-            setTimeout(startGame, 1000);
-        }    
-    });
-};
-
-
-
-const gameOver = () => {
-    $('#heading').text('Game over, press any key to restart');
-    let color = $('body').css('background-color');
-    $('body').css('background-color', 'red');
-    setTimeout(() => {
-        $('body').css('background-color', color);
-    }, 150);
+    $("#"+randomColor).fadeOut(200).fadeIn(200);
+    playSound(randomColor);
 }
 
-const startGame = () =>{
-    let level = 1;
-    $('#heading').text('Level '+level);
+$(".boxes").on('click', function(){
+    let color = $(this).attr('id');
+    userPattern.push(color);
+    playSound(color);
+    animateButton(color);
+    checkAnswer(userPattern.length - 1);
+});
 
-    let values = [], input = [];
-    let tval = 1000;
-    while(true){
-        flag = true;
-        for(let i = 0; i < level; i++){
-            let num = randomValue(1, 4);
-            let identifier = getId(num);
-            values[i] = identifier;
-            setTimeout(animateButton, tval, identifier);
-            if(tval > 500 && i % 2 == 0) tval -= 100;
-        }
-        
-        while(true){
-            let inId;
-            $('.boxes').on('click', () => {
-                inId = $(this).attr('id');
-            });
-        }
+function playSound(key){
+    var audio = new Audio("sounds/"+key+".mp3");
+    audio.play();
+}
 
-        for(let i = 0; i < level; i++){
-            if(values[i] != level[i]){
-                gameOver();
-                break;
-            }
+function animateButton(color) {
+    $('#'+color).addClass('pressed');
+    setTimeout(function(){
+        $("#"+color).removeClass('pressed');
+    }, 100);
+}
+
+function restart(){
+    level = 0;
+    generatedPattern = [];
+    gameFlag = false;
+}
+
+function checkAnswer(level){
+    debugger;
+    if(generatedPattern[level] === userPattern[level]){
+        if(userPattern.length === generatedPattern.length){
+            setTimeout(function(){
+                generateSequence();
+            }, 1000);
         }
-        level++;
+    } else {
+        playSound("wrong");
+        $('body').addClass('game-over');
+        $('#heading').text('Game Over! Press any key to restart');
+        restart();
+        setTimeout(function(){
+            $('body').removeClass('game-over');
+        }, 200);
     }
-};
-
-const animateButton = (identifier) => {
-
-};
+}
