@@ -11,5 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "superheroes": "^3.0.0"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "chalk": "^5.2.0",
+    "progress": "^2.0.3"
   }
 }
