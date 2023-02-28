@@ -15,3 +15,21 @@ console.log($('h1').hasClass('title'));
 $('button').text('Button to click');
 
 $('.two').html('<i>Button to not click</i>').css('background-color', 'pink');
+
+$('.three').click(function(){
+    $('h1').slideToggle();
+})
+
+$('.four').click(function(){
+    $('h1').fadeOut(500).fadeIn(500);
+})
+
+$('.one').click(function(){
+    $('h1').toggle()
+})
+
+$('.two').click(function(){
+    $('h1').animate({
+        opacity: 0.5
+    }) 
+})
