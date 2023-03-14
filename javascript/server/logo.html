@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Git Logo</title>
+    <link rel="stylesheet" href="css/logo.css" type="text/css">
+    <style>
+        body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: azure;
+}
+
+.logo{
+    height: 150px;
+    width: 150px;
+    background-color: #f06033;
+    border-radius: 15px;
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.line-1{
+    width: 110px;
+    background-color: white;
+    height: 10px;
+    top: 40px;
+    position: absolute;
+}
+.line-1::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    top: -8px;
+    left: 31px;
+}
+
+.line-1::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    top: -8px;
+    left: 90px;
+}
+
+.line-2{
+    width: 90px;
+    background-color: white;
+    height: 12px;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    transform: rotate(45deg);
+}
+
+.line-2::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    top: -8px;
+    left: 70px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+    </div>
+
+</body>
+
+</html>
