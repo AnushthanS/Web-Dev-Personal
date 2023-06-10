@@ -1,0 +1,76 @@
+show databases
+use shopDB
+
+show collections
+
+output: products
+
+db.products.insertOnt(
+	{
+		_id: 1,
+		name: "pen",
+		price: 1.8,
+		qty: 10
+	}
+)
+
+db.products.find() //to list all the entries
+db.products.find({name: "pen"})
+
+
+db.products.insertOne(
+	{
+		_id: 2,
+		name: "pencil",
+		price: 0.5,
+		qty: 5
+	}
+)
+
+
+db.products.find({price: {$gt: 1.0}})
+db.products.find({price: {$lt: 1.0}})
+
+db.collections.find(query, projections)
+
+projections specifies the fields that should be returned
+by default, an id will always be returned
+can be changed with projection
+
+
+db.products.find({price: {$gt: 0.8}}, {name: 1, _id: 0})
+will only return name of the products with price greater than $0.8
+
+
+db.testCollection.insertOne(
+	{
+		id: 1,
+		name: "Anushthan",
+	}
+)
+
+notice that instead of "_id", we gave an "id", which was just stored as another value and nothing else
+the entry got a unique object id provided by mongodb
+
+better to use _id if don't want to deal with multiple identifications
+
+db.testCollection.find({name: "Anushthan"})
+will only return the name and the _id fields, _id giving the object id provided by mongo and not the id we provided since it is only treated as another field
+
+
+
+db.products.deleteMany({name: "Glue"})
+will delete all that have that name
+
+
+db.collections.aggregate(
+	[
+		{$set: {commonValue: "everyone"}}
+	]
+)
+
+will add a commonValue to each document of the collection
+
+db.products.updateOne(
+ {name: "Pencil"}, {$set: {qty: 12}}
+)
