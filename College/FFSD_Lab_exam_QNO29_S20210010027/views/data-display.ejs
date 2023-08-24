@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entries</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Entries</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>TimeStamp</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>State</th>
+                <th>Gender</th>
+                <th>Cases</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% entries.reverse().forEach(entry => {%> 
+                <tr>
+                    <td><%= entry.S20027timestamp %></td>
+                    <td><%= entry.S20027Name %></td>
+                    <td><%= entry.S20027Email %></td>
+                    <td><%= entry.S20027State %></td>
+                    <td><%= entry.S20027Gender %></td>
+                    <td><%= entry.S20027Cases %></td>
+                </tr>
+            <%}) %>
+        </tbody>
+    </table>
+</body>
+</html>

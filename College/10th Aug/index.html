@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anushthan Saxena">
+    <title>Demo</title>
+    <style>
+        .sizeInc{
+            font-size: x-large;
+        }
+        .demo_form{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">10th August</h1>
+    <p id="line1" style="font-size: x-large;">Hide by id</p>
+    <button onclick="hide()">hide</button>
+
+    <p class="sizeInc">Find by class name</p>
+    <p class="sizeInc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, eius illo repellendus ratione maxime vero debitis doloremque iure quo in placeat architecto iste itaque. Fugit natus velit possimus inventore officiis sit quos.</p>
+    <button onclick="toggle1()">Toggle by class</button>
+    <button onclick="toggle2()">Toggle by tag</button>
+    <br><br>
+    <form action="post" class="demo_form" id="demo_form">
+        <input type="text" name="input_1" id="input_1">
+        <input type="text" name="input_2" id="input_2">
+        <button type="submit">Submit</button>
+    </form>
+    <button onclick="form_elements()">Display Form Values</button>
+    <p id="fnames"></p>
+    <script>
+        var hide = function(){
+            let line = document.getElementById('line1');
+            if(line.style.display == 'block'){
+                line.style.display = "none";
+            } else line.style.display = 'block'
+        }
+
+        var toggle1 = function(){
+            let elements = document.getElementsByClassName('sizeInc');
+        elements[1].innerHTML = "";
+        }
+
+        var toggle2 = function(){
+            let elements = document.getElementsByTagName('p');
+            elements[1].style.fontWeight="bold";
+        }
+        
+        var form_elements = function() {
+            let names = document.forms['demo_form'];
+            let text = "";
+            for(let i = 0; i < names.length; i++){
+                text += names.elements[i].value + "<br>"
+            }
+            document.getElementById('fnames').innerHTML = text;
+        }
+    </script>
+</body>
+</html>

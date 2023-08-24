@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCRB Survey</title>
+</head>
+<body>
+    <h1 style="text-align: center;">NCRB Survey</h1>
+    <form action="/collect-data" method="post">
+        <input type="text" name="nameInput"  id="nameInput" required placeholder="name">
+        <input type="text" name="emailInput"  id="emailInput" required placeholder="email">
+        <input type="text" name="stateInput"  id="stateInput" required placeholder="state">
+        <select name="genderInput">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Transgender">Transgender</option>
+        </select>
+        <input type="number" name="casesInput" required placeholder="Suicide Cases" min="0">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

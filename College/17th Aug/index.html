@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos</title>
+</head>
+<body>
+    <script>
+        let allowDrop = (event) => {
+            event.preventDefault();
+        }
+
+        let drag = (event) => {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        let drop = (event) => {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+        let validate = function() {
+            let name = document.forms[0].name.value;
+            let email = document.forms[0].email.value;
+            const mailFormat = /^([a-zA-Z0-9])+\@([a-zA-Z\.\-])+\.([a-zA-Z])+$/;
+            if(email.match(mailFormat)){
+                alert("Valid email");
+            } else alert("Invalid");
+        }
+    </script>
+
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="name">
+        <input type="text" name="email" id="email" placeholder="email">
+        <button type="submit" onclick="validate()">Validate</button>
+    </form>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 0.2rem; border-color: black; width: 100px; height: 100px;"></div>
+
+    <img id="drag1" width="100px" height="100px" src="./../img.png" alt="git_logo" draggable="true" ondragstart="drag(event)">
+</body>
+</html>
