@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anushthan Saxena">
+
+    <style>
+        @keyframes spin {
+            50%{
+                transform: rotate(540deg);
+            }
+            100% {
+                transform: rotate(1080deg);
+            }
+        }
+        #form_validation{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+
+        }
+        #rectangle{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            background-color: yellow;
+            animation-name: spin;
+            animation-duration: 5s;
+        }
+        form{
+            padding: 0 8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    </style>
+
+    <title>Graded Assignment 1</title>
+</head>
+<body>
+    
+    <div id="form_validation">
+        <div id="error"></div>
+        <form action="">
+            <input type="text" id="name" placeholder="name" style="text-align: center; margin: 20px;">
+            <input type="text" id="email" placeholder="email" style="text-align: center; margin: 20px;">
+            <button onclick="validate()" style="margin: 20px;">validate</button>
+
+            <div class="hidden">
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        function validate(){
+            let emailField = document.getElementById('email');
+            let emailPattern = /^[a-zA-Z0-9\.]+(@)[a-zA-Z]+(\.)[a-zA-Z]{2,3}$/;
+            if(emailField.value.match(emailPattern)){
+                makeRectangle();
+            } else {
+                makeRed();
+            }
+        }
+        function makeRed(){
+            document.body.style.backgroundColor = "red";
+        }
+        function makeDefault(){
+            document.body.style.backgroundColor = "white";
+        }
+
+        function makeRectangle(){
+            document.getElementsByClassName("hidden")[0].setAttribute("id", "rectangle");
+        }
+
+        let nameField = document.getElementById("name");
+        nameField.addEventListener("blur", function(){
+            let nameValue = nameField.value;
+            let namePattern = /^[a-zA-Z]+$/;
+            if(nameValue.match(namePattern)){
+                nameField.value = nameValue.toUpperCase();
+                makeDefault();
+            } else {
+                makeRed();
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

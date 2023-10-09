@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax demos</title>
+</head>
+<body>
+    <div>
+        <h1>The XMLHttpRequest Object</h1>
+        <button type="button" onclick="loadDoc()">Load data</button>
+    </div>
+
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <script>
+        function loadDoc(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    document.getElementById("demo").innerHTML = this.responseText;
+                    document.getElementById("demo2").innerHTML = this.getAllResponseHeaders();
+                }
+            };
+            xhttp.open("GET", "random.txt", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
