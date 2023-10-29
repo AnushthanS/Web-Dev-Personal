@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { github } from '../assets';
 
 
-const ProjectCard = ({ index, name, description, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt options={
@@ -29,8 +29,18 @@ const ProjectCard = ({ index, name, description, image, source_code_link }) => {
         </div>
 
         <div className='mt-5'>
-          <h3>{name}</h3>
-          <p>{description}</p>
+          <h3 className='text-white text-[24px] font-bold'>{name}</h3>
+          <p className='text-secondary text-[14px]'>{description}</p>
+        </div>
+
+        <div className='mt-4 flex flex-wrap gap-2'>
+          {tags.map(
+            (tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                #{tag.name}
+              </p>
+            )
+          )}
         </div>
       </Tilt>
     </motion.div>
