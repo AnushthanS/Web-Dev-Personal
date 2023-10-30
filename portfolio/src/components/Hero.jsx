@@ -11,19 +11,19 @@ const Hero = () => {
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
 
         {/* The circle and the tracking line in this div */}
-        <div className='flex flex-col justify-center items-center mt-20'>
+        <div className='flex flex-col justify-center items-center my-10'>
           <div className='w-5 h-5 rounded-full bg-[#915eff]'></div>
-          <div className='w-1 sm:h-60 h-40 violet-gradient'></div>
+          <div className='w-1 sm:h-80 h-40 violet-gradient'></div>
         </div>
 
         {/* Hero text in this div */}
-        <div className='mt-20'>
+        <div className='my-[40px]'>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm <span className='text-cyan-400'>Anushthan Saxena</span></h1>
-          <p className={`${styles.heroSubText} mt-5 text-white-100`}>I make random stuff<br className='block sm:hidden' /> for the random problems I solve.  </p>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>I make random stuff<br className='block sm:hidden' /> for the random problems I solve.  </p>
         </div>
       </div>
-
       <ComputersCanvas />
+
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href="#about">
@@ -46,4 +46,4 @@ const Hero = () => {
   );
 }
 
-export default Hero
+export default Hero;
