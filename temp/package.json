@@ -1,0 +1,24 @@
+{
+  "name": "temp",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gltf-import-export": "^1.0.22",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "@types/yargs": "^17.0.29",
+    "eslint": "^8.52.0",
+    "jshint": "^2.13.6",
+    "typescript": "^5.2.2"
+  }
+}
