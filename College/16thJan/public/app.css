@@ -1,0 +1,10 @@
+:root{
+    box-sizing: border-box;
+}
+
+.img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
