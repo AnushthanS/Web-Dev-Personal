@@ -1,7 +1,6 @@
 'use client';
 import { useLayoutEffect } from "react";
 import Hero  from "./components/Hero";
-import Nav from "./components/Nav";
 import Divider from "./components/Divider";
 
 export default function Home() {
@@ -12,8 +11,7 @@ export default function Home() {
     };
   });
   return (
-    <section className="bg-color3 relative">
-      <Nav />
+    <section className="relative">
       <Hero />
       <Divider />
     </section>
