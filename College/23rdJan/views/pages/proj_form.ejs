@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <title>Project Form</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <div class="mx-auto w-[75%] flex flex-col items-center justify-center p-4">
+        <form action="/submit" method="post" class="flex flex-col items-center justify-center border-2 border-black rounded-3xl p-4 gap-6" name="form">
+            <label for="name">
+                Project Name:
+                <input type="text" name="name" id="name" placeholder="Project Name" class="rounded-xl p-4">
+            </label>
+            <label for="duration">
+                Duration:
+                <input type="text" name="duration" id="duration" placeholder="Duration" class="rounded-xl p-4">
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

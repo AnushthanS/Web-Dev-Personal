@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Entries</title>
+</head>
+
+<body>
+    <%- include('../partials/navbar') %>
+        <h1 class="text-center font-4xl">Entries</h1>
+        <table class="flex gap-5 w-3/4">
+            <tr>
+                <th class="m-4">Project name</th>
+                <th class="m-4">Project duration</th>
+            </tr>
+            <% data.forEach(function(entry) { %>
+                <tr>
+                    <td class="m-4">
+                        <%= entry.name %>
+                    </td>
+                    <td class="m-4">
+                        <%= entry.duration %>
+                    </td>
+                </tr>
+                <% }); %>
+        </table>
+</body>
+
+</html>

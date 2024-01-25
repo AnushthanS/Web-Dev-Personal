@@ -1,9 +1,19 @@
-import './App.css';
+import './App.css'
+import { useLayoutEffect } from 'react';
+import { Hero } from './components';
 
 function App() {
-  return (
-    <div className='text-center'>App</div>
-  )
+  useLayoutEffect(() => {
+    async () => {
+      const locomotiveScroll = (await import ('locomotive-scroll')).default;
+      new locomotiveScroll();
+    };
+  });
+  return(
+    <>
+      <Hero />
+    </>
+  );
 }
 
 export default App
