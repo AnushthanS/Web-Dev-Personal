@@ -2,11 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 function MaskText() {
-    const [isHovered, setIsHovered] = useState(false);
-    const elementRef = useRef(null);
-    const { x, y } = UseMousePosition(elementRef);
-    const size = isHovered ? 400 : 40;
-
     const UseMousePosition = (elementRef) => {
         const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
@@ -22,6 +17,12 @@ function MaskText() {
 
         return { ...mousePosition, elementRef };
     };
+    const [isHovered, setIsHovered] = useState(false);
+    const elementRef = useRef(null);
+    const { x, y } = UseMousePosition(elementRef);
+    const size = isHovered ? 400 : 40;
+
+
     return (
 
         <section ref={elementRef} className='w-full'>
