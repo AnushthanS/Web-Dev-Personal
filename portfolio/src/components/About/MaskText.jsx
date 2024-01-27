@@ -1,52 +1,57 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const UseMousePosition = () => {
+const UseMousePosition = (elementRef) => {
     const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+
     const updateMousePosition = e => {
         setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     useEffect(() => {
-        window.addEventListener("mousemove", updateMousePosition);
-        return () => window.removeEventListener("mousemove", updateMousePosition);
+        const element = elementRef.current;
+        element.addEventListener("mousemove", updateMousePosition);
+        return () => element.removeEventListener("mousemove", updateMousePosition);
     }, []);
-    return mousePosition;
+
+    return { ...mousePosition, elementRef };
 };
 
 function MaskText() {
     const [isHovered, setIsHovered] = useState(false);
-    const { x, y } = UseMousePosition();
+    const elementRef = useRef(null);
+    const { x, y } = UseMousePosition(elementRef);
     const size = isHovered ? 400 : 40;
 
     return (
 
-        <>
+        <section ref={elementRef}>
             <motion.div
                 className='text-color3 w-full h-[60vh] py-4 px-2 text-3xl md:text-5xl absolute bg-color5'
                 style={{
                     maskImage: "url('/mask.svg')",
                     maskRepeat: "no-repeat",
                     maskSize: "40px",
-                  }}
+                }}
                 animate={{
-                    WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2)}px`,
+                    WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2 - 200)}px`,
                     WebkitMaskSize: `${size}px`,
                 }}
                 transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}
             >
                 <p onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, alias. Voluptatibus possimus deserunt tempore fuga sint, minus suscipit numquam modi doloremque porro aperiam, ducimus architecto error eaque natus voluptates inventore.
+                    I love animations, prefered frontend stack is React, Next.js, TailwindCSS, and Framer Motion. Other than animations, most of my time is dedicated to my guitar.
+
                 </p>
             </motion.div>
 
-            {/* text div */}
+
             <div className='text-white w-full h-[60vh] py-4 px-2 text-3xl md:text-5xl'>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, alias. Voluptatibus possimus deserunt tempore fuga sint, minus suscipit numquam modi doloremque porro aperiam, ducimus architecto error eaque natus voluptates inventore.
+                    I&apos;m a third-year student at IIIT Sri City, passionate about creative development and design. I love to create things that live on the internet, building products that fulfil my artistic endeavours along the way.
                 </p>
             </div>
-        </>
+        </section>
     )
 }
 

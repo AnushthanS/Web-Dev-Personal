@@ -12,8 +12,8 @@ export default function Home() {
   });
   return (
     <section className="relative">
-      {/* <Hero /> */}
-      <About />
+      <Hero />
+      <About id='about' />
 
     </section>
   );
