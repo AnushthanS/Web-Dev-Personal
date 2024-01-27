@@ -1,40 +1,39 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const UseMousePosition = (elementRef) => {
-    const [mousePosition, setMousePosition] = useState({ x: null, y: null });
-
-    const updateMousePosition = e => {
-        setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    useEffect(() => {
-        const element = elementRef.current;
-        element.addEventListener("mousemove", updateMousePosition);
-        return () => element.removeEventListener("mousemove", updateMousePosition);
-    }, []);
-
-    return { ...mousePosition, elementRef };
-};
-
 function MaskText() {
     const [isHovered, setIsHovered] = useState(false);
     const elementRef = useRef(null);
     const { x, y } = UseMousePosition(elementRef);
     const size = isHovered ? 400 : 40;
 
+    const UseMousePosition = (elementRef) => {
+        const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+
+        const updateMousePosition = e => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+
+        useEffect(() => {
+            const element = elementRef.current;
+            element.addEventListener("mousemove", updateMousePosition);
+            return () => element.removeEventListener("mousemove", updateMousePosition);
+        }, [elementRef]);
+
+        return { ...mousePosition, elementRef };
+    };
     return (
 
-        <section ref={elementRef}>
+        <section ref={elementRef} className='w-full'>
             <motion.div
-                className='text-color3 w-full h-[60vh] py-4 px-2 text-3xl md:text-5xl absolute bg-color5'
+                className='text-color3 w-full h-[60vh] py-4 text-3xl md:text-5xl absolute bg-color5'
                 style={{
                     maskImage: "url('/mask.svg')",
                     maskRepeat: "no-repeat",
                     maskSize: "40px",
                 }}
                 animate={{
-                    WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2 - 200)}px`,
+                    WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2 + 285)}px`,
                     WebkitMaskSize: `${size}px`,
                 }}
                 transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}

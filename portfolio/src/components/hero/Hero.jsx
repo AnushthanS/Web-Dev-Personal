@@ -50,11 +50,7 @@ function Hero() {
     }
 
     return (
-        <>
-            <div className='absolute top-0 z-30 w-[100vw]'>
-                <Nav />
-            </div>
-            
+        <>  
             <section className='overflow-hidden max-w-[100vw] h-[100vh] flex flex-col justify-center items-center relative'>
 
                 <div className='w-full h-full absolute z-0'>
