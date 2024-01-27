@@ -9,11 +9,11 @@ const TopBar = () => {
     const navItems = [
         {
             title: "Home",
-            href: '#'
+            href: '/'
         },
         {
             title: "About",
-            href: '#about'
+            href: '/about'
         },
         {
             title: "Projects",
