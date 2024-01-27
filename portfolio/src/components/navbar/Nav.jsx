@@ -7,7 +7,7 @@ function Nav() {
       <section className="relative h-[50px] text-white flex py-2">
         <div className="absolute left-4 top-2 text-2xl md:text-3xl font-thin brightness-90 hover:brightness-100">
           {/* todo: Animate this for hover */}
-          Anushthan Saxena
+          AnushthanS
         </div>
 
 

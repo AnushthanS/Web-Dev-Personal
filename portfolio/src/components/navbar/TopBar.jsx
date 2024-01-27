@@ -41,7 +41,7 @@ const TopBar = () => {
     const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
     const initialPath = `M0 0 L${window.innerWidth} 0 Q${window.innerWidth / 2} -100 0 0`;
-    const targetPath = `M0 0 L${window.innerWidth} 0 Q${window.innerWidth / 2} 100 0 0`;
+    const targetPath = `M0 0 L${window.innerWidth} 0 Q${window.innerWidth / 2} 75 0 0`;
 
     const curve = {
         initial: {

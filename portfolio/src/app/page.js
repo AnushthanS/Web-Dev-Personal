@@ -1,7 +1,7 @@
 'use client';
 import { useLayoutEffect } from "react";
 import Hero  from "../components/hero/Hero";
-import Divider from "../components/Divider";
+import About from "../components/about";
 
 export default function Home() {
   useLayoutEffect(() => {
@@ -12,8 +12,9 @@ export default function Home() {
   });
   return (
     <section className="relative">
-      <Hero />
-      <Divider />
+      {/* <Hero /> */}
+      <About />
+
     </section>
   );
 }
