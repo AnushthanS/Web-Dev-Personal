@@ -1,8 +1,8 @@
 'use client';
 import { useLayoutEffect } from "react";
-import Hero from "../components/hero/Hero";
-import About from "../components/about";
-import Nav from "@/components/navbar/Nav";
+import Hero from "@/components/hero";
+import About from "@/components/about";
+import Nav from "@/components/navbar";
 
 export default function Home() {
   useLayoutEffect(() => {
@@ -17,7 +17,7 @@ export default function Home() {
         <Nav />
       </div>
       <Hero />
-      <About id='about' />
+      <About />
     </section>
   );
 }
