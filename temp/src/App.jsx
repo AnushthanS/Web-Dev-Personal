@@ -1,9 +1,8 @@
-import './App.css'
-
+import Menu from "./Menu"
+import "./App.css"
 function App() {
-
   return (
-    <div className="text-center"></div>
+    <Menu />
   )
 }
 
